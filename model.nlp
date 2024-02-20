@@ -1,0 +1,814 @@
+{
+  "settings": {
+    "languages": [
+      "pt-br"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "trainByDomain": false,
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "caf,e,espress,o,que": {
+            "intent": "cafe_espresso",
+            "domain": "default"
+          },
+          "caf,espress,expliqu": {
+            "intent": "cafe_espresso",
+            "domain": "default"
+          },
+          "caf,defin,espress": {
+            "intent": "cafe_espresso",
+            "domain": "default"
+          },
+          "espress,o,que,signif": {
+            "intent": "cafe_espresso",
+            "domain": "default"
+          },
+          "caf,e,latt,o,que": {
+            "intent": "cafe_latte",
+            "domain": "default"
+          },
+          "caf,expliqu,latt": {
+            "intent": "cafe_latte",
+            "domain": "default"
+          },
+          "caf,defin,latt": {
+            "intent": "cafe_latte",
+            "domain": "default"
+          },
+          "latt,o,que,signif": {
+            "intent": "cafe_latte",
+            "domain": "default"
+          },
+          "caf,cappuccin,e,o,que": {
+            "intent": "cafe_cappuccino",
+            "domain": "default"
+          },
+          "caf,cappuccin,expliqu": {
+            "intent": "cafe_cappuccino",
+            "domain": "default"
+          },
+          "caf,cappuccin,defin": {
+            "intent": "cafe_cappuccino",
+            "domain": "default"
+          },
+          "cappuccin,o,que,signif": {
+            "intent": "cafe_cappuccino",
+            "domain": "default"
+          },
+          "caf,com,espress,faz": {
+            "intent": "fazer_cafe_espresso",
+            "domain": "default"
+          },
+          "caf,com,espress,prepar": {
+            "intent": "fazer_cafe_espresso",
+            "domain": "default"
+          },
+          "a,caf,de,e,espress,qual,receit": {
+            "intent": "fazer_cafe_espresso",
+            "domain": "default"
+          },
+          "bom,caf,com,espress,faz,um": {
+            "intent": "fazer_cafe_espresso",
+            "domain": "default"
+          },
+          "caf,com,faz,latt": {
+            "intent": "fazer_cafe_latte",
+            "domain": "default"
+          },
+          "caf,com,latt,prepar": {
+            "intent": "fazer_cafe_latte",
+            "domain": "default"
+          },
+          "a,caf,de,e,latt,qual,receit": {
+            "intent": "fazer_cafe_latte",
+            "domain": "default"
+          },
+          "bom,caf,com,faz,latt,um": {
+            "intent": "fazer_cafe_latte",
+            "domain": "default"
+          },
+          "caf,cappuccin,com,faz": {
+            "intent": "fazer_cafe_cappuccino",
+            "domain": "default"
+          },
+          "caf,cappuccin,com,prepar": {
+            "intent": "fazer_cafe_cappuccino",
+            "domain": "default"
+          },
+          "a,caf,cappuccin,de,e,qual,receit": {
+            "intent": "fazer_cafe_cappuccino",
+            "domain": "default"
+          },
+          "bom,caf,cappuccin,com,faz,um": {
+            "intent": "fazer_cafe_cappuccino",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "cafe_espresso": "default",
+          "cafe_latte": "default",
+          "cafe_cappuccino": "default",
+          "fazer_cafe_espresso": "default",
+          "fazer_cafe_latte": "default",
+          "fazer_cafe_cappuccino": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "O que é café espresso?",
+            "intent": "cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "Explique café espresso.",
+            "intent": "cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "Defina café espresso.",
+            "intent": "cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "O que significa espresso?",
+            "intent": "cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "O que é café latte?",
+            "intent": "cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Explique café latte.",
+            "intent": "cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Defina café latte.",
+            "intent": "cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "O que significa latte?",
+            "intent": "cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "O que é café cappuccino?",
+            "intent": "cafe_cappuccino"
+          },
+          {
+            "domain": "default",
+            "utterance": "Explique café cappuccino.",
+            "intent": "cafe_cappuccino"
+          },
+          {
+            "domain": "default",
+            "utterance": "Defina café cappuccino.",
+            "intent": "cafe_cappuccino"
+          },
+          {
+            "domain": "default",
+            "utterance": "O que significa cappuccino?",
+            "intent": "cafe_cappuccino"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como fazer café espresso?",
+            "intent": "fazer_cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como preparar café espresso?",
+            "intent": "fazer_cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "Qual é a receita de café espresso?",
+            "intent": "fazer_cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como fazer um bom café espresso?",
+            "intent": "fazer_cafe_espresso"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como fazer café latte?",
+            "intent": "fazer_cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como preparar café latte?",
+            "intent": "fazer_cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Qual é a receita de café latte?",
+            "intent": "fazer_cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como fazer um bom café latte?",
+            "intent": "fazer_cafe_latte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como fazer café cappuccino?",
+            "intent": "fazer_cafe_cappuccino"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como preparar café cappuccino?",
+            "intent": "fazer_cafe_cappuccino"
+          },
+          {
+            "domain": "default",
+            "utterance": "Qual é a receita de café cappuccino?",
+            "intent": "fazer_cafe_cappuccino"
+          },
+          {
+            "domain": "default",
+            "utterance": "Como fazer um bom café cappuccino?",
+            "intent": "fazer_cafe_cappuccino"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "o": 1,
+              "que": 1,
+              "e": 1,
+              "caf": 1,
+              "espress": 1,
+              "expliqu": 1,
+              "defin": 1,
+              "signif": 1,
+              "latt": 1,
+              "cappuccin": 1,
+              "com": 1,
+              "faz": 1,
+              "prepar": 1,
+              "qual": 1,
+              "a": 1,
+              "receit": 1,
+              "de": 1,
+              "um": 1,
+              "bom": 1
+            },
+            "intents": {
+              "cafe_espresso": 1,
+              "cafe_latte": 1,
+              "cafe_cappuccino": 1,
+              "fazer_cafe_espresso": 1,
+              "fazer_cafe_latte": 1,
+              "fazer_cafe_cappuccino": 1
+            },
+            "intentFeatures": {
+              "cafe_espresso": {
+                "o": 1,
+                "que": 1,
+                "e": 1,
+                "caf": 1,
+                "espress": 1,
+                "expliqu": 1,
+                "defin": 1,
+                "signif": 1
+              },
+              "cafe_latte": {
+                "o": 1,
+                "que": 1,
+                "e": 1,
+                "caf": 1,
+                "latt": 1,
+                "expliqu": 1,
+                "defin": 1,
+                "signif": 1
+              },
+              "cafe_cappuccino": {
+                "o": 1,
+                "que": 1,
+                "e": 1,
+                "caf": 1,
+                "cappuccin": 1,
+                "expliqu": 1,
+                "defin": 1,
+                "signif": 1
+              },
+              "fazer_cafe_espresso": {
+                "com": 1,
+                "faz": 1,
+                "caf": 1,
+                "espress": 1,
+                "prepar": 1,
+                "qual": 1,
+                "e": 1,
+                "a": 1,
+                "receit": 1,
+                "de": 1,
+                "um": 1,
+                "bom": 1
+              },
+              "fazer_cafe_latte": {
+                "com": 1,
+                "faz": 1,
+                "caf": 1,
+                "latt": 1,
+                "prepar": 1,
+                "qual": 1,
+                "e": 1,
+                "a": 1,
+                "receit": 1,
+                "de": 1,
+                "um": 1,
+                "bom": 1
+              },
+              "fazer_cafe_cappuccino": {
+                "com": 1,
+                "faz": 1,
+                "caf": 1,
+                "cappuccin": 1,
+                "prepar": 1,
+                "qual": 1,
+                "e": 1,
+                "a": 1,
+                "receit": 1,
+                "de": 1,
+                "um": 1,
+                "bom": 1
+              }
+            },
+            "featuresToIntent": {
+              "o": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino"
+              ],
+              "que": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino"
+              ],
+              "e": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino",
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "caf": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino",
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "espress": [
+                "cafe_espresso",
+                "fazer_cafe_espresso"
+              ],
+              "expliqu": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino"
+              ],
+              "defin": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino"
+              ],
+              "signif": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino"
+              ],
+              "latt": [
+                "cafe_latte",
+                "fazer_cafe_latte"
+              ],
+              "cappuccin": [
+                "cafe_cappuccino",
+                "fazer_cafe_cappuccino"
+              ],
+              "com": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "faz": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "prepar": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "qual": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "a": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "receit": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "de": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "um": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "bom": [
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "o",
+                "que",
+                "e",
+                "caf",
+                "espress",
+                "expliqu",
+                "defin",
+                "signif",
+                "latt",
+                "cappuccin",
+                "com",
+                "faz",
+                "prepar",
+                "qual",
+                "a",
+                "receit",
+                "de",
+                "um",
+                "bom"
+              ],
+              "intents": [
+                "cafe_espresso",
+                "cafe_latte",
+                "cafe_cappuccino",
+                "fazer_cafe_espresso",
+                "fazer_cafe_latte",
+                "fazer_cafe_cappuccino"
+              ],
+              "perceptrons": [
+                [
+                  2.1380844116210938,
+                  2.1380844116210938,
+                  -0.4060533940792084,
+                  0.43796223402023315,
+                  9.64832592010498,
+                  3.872239112854004,
+                  3.859369993209839,
+                  0.061912182718515396,
+                  -4.578336238861084,
+                  -4.569429397583008,
+                  -6.882821083068848,
+                  -3.5288939476013184,
+                  -3.3479833602905273,
+                  -2.4798052310943604,
+                  -2.4798052310943604,
+                  -2.4798052310943604,
+                  -2.4798052310943604,
+                  -0.5195876359939575,
+                  -0.5195876359939575,
+                  0.24649123099952305
+                ],
+                [
+                  2.144664764404297,
+                  2.144664764404297,
+                  -0.4022471308708191,
+                  0.44303280115127563,
+                  -4.543820381164551,
+                  3.8786823749542236,
+                  3.863830804824829,
+                  0.060528360307216644,
+                  9.653998374938965,
+                  -4.602667808532715,
+                  -6.895087718963623,
+                  -3.5253565311431885,
+                  -3.363560676574707,
+                  -2.484344244003296,
+                  -2.484344244003296,
+                  -2.484344244003296,
+                  -2.484344244003296,
+                  -0.5450853109359741,
+                  -0.5450853109359741,
+                  0.2505386912871567
+                ],
+                [
+                  2.14250111579895,
+                  2.14250111579895,
+                  -0.4042183458805084,
+                  0.4508395493030548,
+                  -4.572483539581299,
+                  3.8758347034454346,
+                  3.8713772296905518,
+                  0.06105952709913254,
+                  -4.556065082550049,
+                  9.64564037322998,
+                  -6.890357971191406,
+                  -3.5078353881835938,
+                  -3.3790905475616455,
+                  -2.4846644401550293,
+                  -2.4846644401550293,
+                  -2.4846644401550293,
+                  -2.4846644401550293,
+                  -0.6043496131896973,
+                  -0.6043496131896973,
+                  0.25508541340426644
+                ],
+                [
+                  -2.8965368270874023,
+                  -2.8965368270874023,
+                  0.3607727289199829,
+                  -2.1639676094055176,
+                  8.401325225830078,
+                  -4.47864294052124,
+                  -4.306718826293945,
+                  -0.9682300686836243,
+                  -5.779834270477295,
+                  -5.762171745300293,
+                  6.323556423187256,
+                  3.1437628269195557,
+                  3.178713798522949,
+                  2.289079189300537,
+                  2.289079189300537,
+                  2.289079189300537,
+                  2.289079189300537,
+                  0.03426193445920944,
+                  0.03426193445920944,
+                  -1.5699723465325968
+                ],
+                [
+                  -2.963679075241089,
+                  -2.963679075241089,
+                  0.2393425554037094,
+                  -2.2347614765167236,
+                  -5.681541919708252,
+                  -4.480792045593262,
+                  -4.325655937194824,
+                  -0.862199068069458,
+                  8.406988143920898,
+                  -5.821279048919678,
+                  6.377891540527344,
+                  3.1540188789367676,
+                  3.216823101043701,
+                  2.3408219814300537,
+                  2.3408219814300537,
+                  2.3408219814300537,
+                  2.3408219814300537,
+                  0.053824763745069504,
+                  0.053824763745069504,
+                  -1.5494201484852754
+                ],
+                [
+                  -2.975433588027954,
+                  -2.975433588027954,
+                  0.20649738609790802,
+                  -2.2471466064453125,
+                  -5.755011081695557,
+                  -4.459286689758301,
+                  -4.34753942489624,
+                  -0.8309054970741272,
+                  -5.707528591156006,
+                  8.38957691192627,
+                  6.394629001617432,
+                  3.1784682273864746,
+                  3.211028575897217,
+                  2.351025104522705,
+                  2.351025104522705,
+                  2.351025104522705,
+                  2.351025104522705,
+                  0.03582208231091499,
+                  0.03582208231091499,
+                  -1.5371570139779642
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "O que é café espresso?"
+      ],
+      [
+        "pt",
+        "Explique café espresso."
+      ],
+      [
+        "pt",
+        "Defina café espresso."
+      ],
+      [
+        "pt",
+        "O que significa espresso?"
+      ],
+      [
+        "pt",
+        "O que é café latte?"
+      ],
+      [
+        "pt",
+        "Explique café latte."
+      ],
+      [
+        "pt",
+        "Defina café latte."
+      ],
+      [
+        "pt",
+        "O que significa latte?"
+      ],
+      [
+        "pt",
+        "O que é café cappuccino?"
+      ],
+      [
+        "pt",
+        "Explique café cappuccino."
+      ],
+      [
+        "pt",
+        "Defina café cappuccino."
+      ],
+      [
+        "pt",
+        "O que significa cappuccino?"
+      ],
+      [
+        "pt",
+        "Como fazer café espresso?"
+      ],
+      [
+        "pt",
+        "Como preparar café espresso?"
+      ],
+      [
+        "pt",
+        "Qual é a receita de café espresso?"
+      ],
+      [
+        "pt",
+        "Como fazer um bom café espresso?"
+      ],
+      [
+        "pt",
+        "Como fazer café latte?"
+      ],
+      [
+        "pt",
+        "Como preparar café latte?"
+      ],
+      [
+        "pt",
+        "Qual é a receita de café latte?"
+      ],
+      [
+        "pt",
+        "Como fazer um bom café latte?"
+      ],
+      [
+        "pt",
+        "Como fazer café cappuccino?"
+      ],
+      [
+        "pt",
+        "Como preparar café cappuccino?"
+      ],
+      [
+        "pt",
+        "Qual é a receita de café cappuccino?"
+      ],
+      [
+        "pt",
+        "Como fazer um bom café cappuccino?"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "pt-br": {
+        "cafe_espresso": [
+          {
+            "answer": "O café espresso é uma bebida altamente concentrada, feita passando água quente sob pressão através de grãos de café finamente moídos."
+          }
+        ],
+        "cafe_latte": [
+          {
+            "answer": "O café latte é uma bebida feita com espresso e leite vaporizado, resultando em uma bebida cremosa e suave."
+          }
+        ],
+        "cafe_cappuccino": [
+          {
+            "answer": "O café cappuccino é uma bebida italiana feita com espresso, leite vaporizado e espuma de leite, conhecida por sua textura cremosa e sabor equilibrado."
+          }
+        ],
+        "fazer_cafe_espresso": [
+          {
+            "answer": "Para fazer café espresso, você precisa moer grãos de café finamente, preencher o porta-filtro da máquina de espresso, extrair o café sob pressão e servir imediatamente."
+          }
+        ],
+        "fazer_cafe_latte": [
+          {
+            "answer": "Para fazer café latte, prepare um espresso, aqueça leite vaporizado e adicione ao espresso, resultando em uma bebida cremosa e suave."
+          }
+        ],
+        "fazer_cafe_cappuccino": [
+          {
+            "answer": "Para fazer café cappuccino, prepare um espresso, aqueça leite vaporizado, adicione espuma de leite e sirva com uma camada de espuma por cima."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
