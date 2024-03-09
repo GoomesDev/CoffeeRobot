@@ -1,5 +1,5 @@
 <h1 align="center">☕ CoffeeRobot ☕</h1>
-<img loading="lazy" src="https://img.shields.io/badge/version%20-%200.09%20-%20blue" />
+<img loading="lazy" src="https://img.shields.io/badge/version%20-%201.0%20-%20blue" />
 
 <h2>Project Description</h2>
 Node application using the <b>Node-NLP</b> library for natural language analysis and processing to serve coffee shops, and specialized applications on the subject.
