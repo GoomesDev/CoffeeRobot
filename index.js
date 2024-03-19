@@ -1,9 +1,12 @@
 const { NlpManager } = require('node-nlp')
-const readline = require('readline')
 const manager = new NlpManager({ languages: ['pt-br'] })
+const readline = require('readline')
+const express = require('express')
 
 manager.load('./model.nlp')
 
+
+// Terminal test
 const main = async() => {
 	const rl = readline.createInterface({
         	input: process.stdin,
@@ -17,3 +20,23 @@ const main = async() => {
 }
 
 main()
+
+
+// API's area
+// const app = express()
+// app.use(express.json())
+// const port = 8000
+
+// app.post('/run', async (req, res) => {
+// 	try {
+// 		const { input } = req.body
+// 		let response = await manager.process('pt-br', input)
+// 		res.json({ answer: response.answer })
+// 	} catch (error) {
+// 		res.status(500).json({ error: 'Ocorreu um erro ao processar a requisição.' })
+// 	}
+// })
+
+// app.listen(port, () => {
+// 	console.log(`CoffeeRobot is running on ${port}`)
+// })
